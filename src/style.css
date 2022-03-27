@@ -1,0 +1,38 @@
+#pynowbtn{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+#paybtn,#acbtn,#addbtn{
+    
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+}
+
+    
+
+ 
+
+#ordercard{
+    background-color: red;
+    color: white;
+    
+}
+
+#ordercardcontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#xtxt{
+    color: black;
+    font-weight: bolder;
+}
+
+#ordtxt{
+    color: white;
+    font-weight: bolder;
+}

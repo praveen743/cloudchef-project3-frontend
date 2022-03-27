@@ -2,6 +2,97 @@
   text-align: center;
 }
 
+.profile{
+  background-color: #e60000;
+  color: white;
+  border-style: none;
+}
+
+#btn{
+  border-style: hidden;
+  border-radius: 50%;
+  font-weight: 100;
+  background-color: #e60000;
+  color: white;
+}
+.logregbtn{
+  float: right;
+  
+  margin-left: 60%;
+}
+#loginbtn,#regbtn{
+  background-color: #e60000;
+  color: white;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+ 
+
+#accordionSidebar{
+  background-color:   #e60000;
+  
+  
+}
+
+.totalbox{
+  background-color: #e60000;
+  height: 50px;
+  width: 200px;
+  float: right;
+  color: white;
+  font-weight: bolder;
+}
+
+#cardbody{
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+#cardcontainer{
+  
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+   
+}
+
+#cartcard{
+  background-color: #e60000;
+}
+
+#inputbox,#submitbutton{
+  background-color: #e60000;
+  color: white;
+  font-weight: bolder;
+}
+
+#card{
+  background-color: #e60000;
+  color: white;
+  font-weight: bolder;
+  border-radius: 0px;
+}
+
+#image{
+  height: 150px;
+  width: 250px;
+  border-radius: 0px;
+}
+
+#searchbtn{
+ background-color:  #ff0000;
+ color: white;
+
+}
+
+#button{
+  background-color: #ff0000;
+ color: white;
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
