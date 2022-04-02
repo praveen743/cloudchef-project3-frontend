@@ -14,7 +14,7 @@ function Addtomenu() {
         onSubmit: async (values) => {
           try {
             console.log(values);
-            let data = await axios.post("http://localhost:3003/menu", values)
+            let data = await axios.post("https://cloudchef-project3-backend.herokuapp.com/menu", values)
              
     
           } catch (error) {
