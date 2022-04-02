@@ -14,7 +14,7 @@ function Customorderstatus({useremail,setcustombill}) {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`http://localhost:3003/ytorderstatus/${useremail}`,{
+          let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/ytorderstatus/${useremail}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -34,7 +34,7 @@ function Customorderstatus({useremail,setcustombill}) {
         try {
             let result = window.confirm("Are you sure do you want to cancel?")
             if (result) {
-                await axios.delete(`http://localhost:3003/customcart/${id}` )
+                await axios.delete(`https://cloudchef-project3-backend.herokuapp.com/customcart/${id}` )
                 fetchcar()
             }
         } catch (error) {
@@ -45,7 +45,7 @@ function Customorderstatus({useremail,setcustombill}) {
 
       let calculate = async (id) => {
         try {
-            var orderinfo = await axios.get(`http://localhost:3003/ytorder/${id}`,{
+            var orderinfo = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/ytorder/${id}`,{
               headers: {
                   Authorization: window.localStorage.getItem("my_token")
               },
