@@ -12,7 +12,7 @@ function Mycustomorder({useremail}) {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`http://localhost:3003/mycustomorder/${useremail}`,{
+          let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/mycustomorder/${useremail}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -28,7 +28,7 @@ function Mycustomorder({useremail}) {
         try {
             let result = window.confirm("Are you sure do you want to cancel?")
             if (result) {
-                await axios.delete(`http://localhost:3003/customcart/${id}` )
+                await axios.delete(`https://cloudchef-project3-backend.herokuapp.com/customcart/${id}` )
                 fetchcar()
             }
         } catch (error) {
