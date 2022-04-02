@@ -20,7 +20,7 @@ function Addrecipe({useremail}) {
 
         if(useremail!== null){
           console.log(values);
-          let data = await axios.post("http://localhost:3003/ytorder", values)
+          let data = await axios.post("https://cloudchef-project3-backend.herokuapp.com/ytorder", values)
           alert( 'Your order placed successfully');
           navigate('/dashboard')
         }else{
