@@ -11,7 +11,7 @@ function Edit({useremail}) {
     let navigate = useNavigate();
     const params = useParams();
     useEffect(async () => {
-        let userData = await axios.get(`http://localhost:3003/editcart/${params.id}`);
+        let userData = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/editcart/${params.id}`);
         console.log(userData.data[0]);
          formik.setFieldValue('itemname',userData.data[0].itemname)
         formik.setFieldValue('price',userData.data[0].price)
@@ -30,7 +30,7 @@ function Edit({useremail}) {
         onSubmit: async (values) => {
           try {
             console.log(values);
-            let data = await axios.put(`http://localhost:3003/editcart/${params.id}`, values)
+            let data = await axios.put(`https://cloudchef-project3-backend.herokuapp.com/editcart/${params.id}`, values)
              navigate('/cart');
              } catch (error) {
             console.log(error)
