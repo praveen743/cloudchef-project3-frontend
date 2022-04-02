@@ -19,7 +19,7 @@ function Additem({useremail}) {
       let fetchitem = async () => {
         try {
             console.log(params.id);
-            let itemdetials = await axios.get(`http://localhost:3003/menu/${params.id}`);
+            let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/menu/${params.id}`);
             console.log(itemdetials.data[0]);
            formik.setFieldValue('itemname',itemdetials.data[0].description)
             formik.setFieldValue('price',itemdetials.data[0].price)
@@ -40,7 +40,7 @@ function Additem({useremail}) {
         onSubmit: async (values) => {
           try {
             console.log(values);
-            let data = await axios.post("http://localhost:3003/cart", values)
+            let data = await axios.post("https://cloudchef-project3-backend.herokuapp.com/cart", values)
              Navigate('/cart');
              } catch (error) {
             console.log(error)
