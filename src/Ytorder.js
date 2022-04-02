@@ -13,7 +13,7 @@ function Ytorder() {
     
       let fetchcart = async () => {
         try {
-          let itemdetials = await axios.get(`http://localhost:3003/ytorder`);
+          let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/ytorder`);
           console.log(itemdetials.data);
           setytborder(itemdetials.data)
         } catch (error) {
