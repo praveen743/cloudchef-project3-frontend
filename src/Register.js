@@ -17,7 +17,7 @@ function Register() {
         onSubmit: async (values) => {
             try {
                  
-                var message = await axios.post("http://localhost:3003/register", values);
+                var message = await axios.post("https://cloudchef-project3-backend.herokuapp.com/register", values);
                 
                 if(message.data.message === "registered"){
                     alert(message.data.message);
