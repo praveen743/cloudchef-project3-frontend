@@ -12,7 +12,7 @@ function Bookingconfirmed({useremail}) {
     
       let fetchcar = async () => {
         try {
-          let itemdetials = await axios.get(`http://localhost:3003/confirmedbooking/${useremail}`,{
+          let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/confirmedbooking/${useremail}`,{
             headers: {
                 Authorization: window.localStorage.getItem("my_token")
             }
@@ -28,7 +28,7 @@ function Bookingconfirmed({useremail}) {
         try {
             let result = window.confirm("Are you sure do you want to cancel?")
             if (result) {
-                await axios.delete(`http://localhost:3003/cart/${id}` )
+                await axios.delete(`https://cloudchef-project3-backend.herokuapp.com/cart/${id}` )
                 fetchcar()
             }
         } catch (error) {
