@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
       let fetchitem = async () => {
         try {
             console.log(params.id);
-            let itemdetials = await axios.get(`http://localhost:3003/ytorder/${params.id}`);
+            let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/ytorder/${params.id}`);
             console.log(itemdetials.data[0]);
           formik.setFieldValue('url',itemdetials.data[0].url)
           formik.setFieldValue('description',itemdetials.data[0].description)
@@ -35,7 +35,7 @@ import { useNavigate } from 'react-router-dom';
         onSubmit: async (values) => {
           try {
             console.log(values);
-            let data = await axios.put(`http://localhost:3003/ytorder/${params.id}`, values)
+            let data = await axios.put(`https://cloudchef-project3-backend.herokuapp.com/ytorder/${params.id}`, values)
             alert('Custom order is taken and price will appear in custom order status section')
              navigate('/dashboard')
             } catch (error) {
