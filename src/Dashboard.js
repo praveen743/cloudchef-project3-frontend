@@ -20,7 +20,7 @@ function Dashboard({useremail}) {
     let fetchmenu = async () => {
         try {
             if(useremail!==null){
-                let menu = await axios.get(`http://localhost:3003/menu`, {
+                let menu = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/menu`, {
                     headers: {
                         Authorization: window.localStorage.getItem("my_token")
                     }
