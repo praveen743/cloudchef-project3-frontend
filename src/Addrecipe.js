@@ -48,7 +48,7 @@ function Addrecipe({useremail}) {
           </div>
           <div className='row mt-4'>
             <div className='col-lg-4 text-right align-self-center'><label><b>Add Description:</b></label></div>
-            <div className='col-lg-6'><input type="url" className='form-control' 
+            <div className='col-lg-6'><input type="text" className='form-control' 
             placeholder='Do you want to add cooking instruction?' 
               onChange={formik.handleChange} value={formik.values.description} name='description'></input></div>
           </div>
