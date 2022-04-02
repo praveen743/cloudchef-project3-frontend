@@ -16,7 +16,8 @@ function Login({setuseremail}) {
             try {
                 console.log(values);
                 let data = await axios.post("http://localhost:3003/login", values)
-                 window.localStorage.setItem("my_token", data.data.token)
+                 window.localStorage.setItem("my_token", data.data.token);
+                 window.localStorage.setItem("useremail", data.data.user.email);
                 console.log(data.data);
                 if (data.data.message == "login") {
                     setuseremail(data.data.user.email);
@@ -26,7 +27,9 @@ function Login({setuseremail}) {
                 }
 
             } catch (error) {
-                console.log(error)
+               alert('UserID or Password Incorrect :(')
+               alert('Register to login')
+
             }
         }
     })

@@ -44,17 +44,18 @@ function Bookingconfirmed({useremail}) {
             
             return <div key={index}>
                
-                <div class="card mt-4 ml-4" id='ordercard' style={{ width: "252px" }}>
-                 <div class="card-body" id='odrcardbd'>
-                     <span>
-                    
+                <div class="card mt-4 ml-4" id='cartcrd' style={{ width: "252px" }}>
+                 <div class="card-body" id='cartcrd'>
+                 <button className='btn'  onClick={() => handleDelete(obj._id)} 
+                     id='xbtn'> <b  >X</b></button>
+                     
+                     
  <p class="card-text" id='ordtxt'>{` ${obj.itemname} (${obj.quntity})`}</p>
  <p class="card-text" id='ordtxt'> {`Price-rs.${(obj.price)*(obj.quntity)}`}
 </p>
 
-                    <button className='btn'  onClick={() => handleDelete(obj._id)} 
-                     id='xbtn'> <b id='xtxt'>X</b></button>
-                     </span>
+                   
+                      
                     
                        
                      </div>

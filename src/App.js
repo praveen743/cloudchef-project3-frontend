@@ -36,14 +36,14 @@ function App() {
           <Sidebar useremail={useremail}/>
           <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-              <Topbar  useremail={useremail}/>
+              <Topbar  useremail={useremail} setuseremail={setuseremail}/>
               <div class="container-fluid">
                 <Routes>
                 <Route path="/login" element={<Login setuseremail={setuseremail}/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
  <Route path="/addrecipe" element={<Addrecipe useremail={useremail} />}></Route>
  <Route path="/addtomenu" element={<Addtomenu />}></Route>
- <Route path="/dashboard" element={<Dashboard />}></Route>
+ <Route path="/dashboard" element={<Dashboard useremail={useremail}/>}></Route>
  <Route path="/cart" element={<Cart useremail={useremail} setbill={setbill} />}></Route>
  <Route path="/additem/:id" element={<Additem useremail={useremail} />}></Route>
  <Route path="/editcart/:id" element={<Edit useremail={useremail} />}></Route>

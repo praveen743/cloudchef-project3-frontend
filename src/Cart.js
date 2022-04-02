@@ -3,9 +3,10 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Cart({useremail,setbill}) {
+  var navigate = useNavigate();
 var sum = 0;
 var billarray=[];
   const [cartarr, setcartarr] = useState([]);
@@ -18,7 +19,7 @@ var billarray=[];
       let itemdetials = await axios.get(`http://localhost:3003/cart/${useremail}`);
       console.log(itemdetials.data);
       setcartarr(itemdetials.data)
-       
+        
       
     } catch (error) {
       console.log(error)
@@ -64,20 +65,20 @@ setbill((orderinfo.data[0].price)*(orderinfo.data[0].quntity))
  
             return <div key={index}>
               
-              <div class="card mt-4 ml-4" id='card' style={{ width: "252px" }}>
+              <div class="card mt-4 ml-4" id='cartcrd' style={{ width: "252px" }}>
                 <p class="card-text mt-1">{obj.itemname}</p>
 
-                <div class="card-body" id='cardbody'>
+                <div class="card-body" id='cartcrd'>
                   <p class="card-text">{`₹ ${obj.price} * ${obj.quntity}`}</p>
                   <p class="card-text">{`item total - ₹${(obj.quntity) * (obj.price)}`}</p>
                  <Link to={`/editcart/${obj._id}`}><button 
-                  className='btn btn-sm'  id='pynowbtn'><b>Edit</b></button></Link>
+                  className='btn btn-sm btn-light mr-2'   ><b>Edit</b></button></Link>
                   <button onClick={() => handleDelete(obj._id)} 
-                  className='btn btn-sm'  id='pynowbtn'><b>cancel</b></button>
+                  className='btn btn-sm btn-light ml-1 mr-1'   ><b>cancel</b></button>
                 
                   <Link to={`/payment/${obj._id}`}> 
-                                  <button className='btn btn-sm '
-                                     id='pynowbtn'    onClick={() => calculate(obj._id)}
+                                  <button className='btn btn-sm btn-light ml-2 '
+                                          onClick={() => calculate(obj._id)}
                                     >Pay Now</button></Link> 
                 </div>
               </div>

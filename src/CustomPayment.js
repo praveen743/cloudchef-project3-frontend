@@ -37,7 +37,7 @@ console.log(custombill);
           address:"Razorpay Corporate office"
         },
         theme: {
-          color:"#FF0000"
+          color:"#8658A5"
         }
       };
       var pay = new window.Razorpay(options);

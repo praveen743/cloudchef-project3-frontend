@@ -44,14 +44,15 @@ function Mycustomorder({useremail}) {
             return <div key={index}>
                
                 <div class="card mt-4 ml-4" id='ordercard' style={{ width: "252px" }}>
+                <button className='btn'  onClick={() => handleDelete(obj._id)} 
+                     id='xbtn'> <b id='xtxt'>X</b></button>
                  <div class="card-body" id='odrcardbd'>
                      <button className='btn btn-light'><a href={obj.url}>View Video</a> </button>
  <p class="card-text" id='ordtxt'>{` Status - ${obj.status}`}</p>
  <p class="card-text" id='ordtxt'> {`Price - rs.${obj.orderprice}`}
 </p>
 
-                    <button className='btn'  onClick={() => handleDelete(obj._id)} 
-                     id='xbtn'> <b id='xtxt'>X</b></button>
+                   
                      
                        
                      </div>

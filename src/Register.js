@@ -59,9 +59,9 @@ function Register() {
                     </div>
                     <div className='row mt-3'>
                          <div className='col-lg-6 mt-2 text-right'><input type="submit" 
-                         className='btn btn-danger btn-lg'  value="Register"></input></div>
+                         className='btn  btn-lg'  value="Register" id='regbtns'></input></div>
                     <Link to="/login"  className='col-lg-6 mt-2 text-left'><input type="submit" 
-                    className='btn btn-danger btn-lg' value="Login"></input></Link>
+                    className='btn  btn-lg' value="Login" id='regbtns'></input></Link>
                     </div>
                    
                 </div>

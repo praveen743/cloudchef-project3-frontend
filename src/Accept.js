@@ -36,6 +36,7 @@ import { useNavigate } from 'react-router-dom';
           try {
             console.log(values);
             let data = await axios.put(`http://localhost:3003/ytorder/${params.id}`, values)
+            alert('Custom order is taken and price will appear in custom order status section')
              navigate('/dashboard')
             } catch (error) {
             console.log(error)
@@ -46,10 +47,10 @@ import { useNavigate } from 'react-router-dom';
   return (
     <>
          <form onSubmit={formik.handleSubmit}>
-        <div className='container'>
+        <div className='container mt-5'>
           <div className='row mt-4'>
             <div className='col-lg-4 text-right align-self-center'><label><b>Enter Price For This Custom Order:</b></label></div>
-            <div className='col-lg-6'><input type="number" className='form-control'  
+            <div className='col-lg-6'><input type="number" className='form-control'  min={1} required
               onChange={formik.handleChange} value={formik.values.orderprice} name='orderprice'></input></div>
           </div>
           

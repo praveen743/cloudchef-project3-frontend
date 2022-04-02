@@ -19,21 +19,17 @@ export default function Sidebar({user,useremail}) {
                 <hr class="sidebar-divider my-0 " />
 
 
-                <li class="nav-item active">
+                {/* <li class="nav-item active">
                      <button className="profile">{useremail?useremail:
                       <Link to='/login'><button className="btn btn-sm" id='regbtn' >Login</button></Link>}</button>
-                </li>
+                </li> */}
 
                 <div class="sidebar-heading">
                     USER
                 </div>
 
-             <li class="nav-item active">
-                    <Link class="nav-link" to="/dashboard">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Menu</span></Link>
-                </li>
-
+             
+            
 
                 <li class="nav-item">
                 <Link class="nav-link collapsed" to='/addrecipe' data-toggle="collapse" data-target="#collapseTwo"
@@ -60,20 +56,10 @@ export default function Sidebar({user,useremail}) {
                     </li>
 
                     <li class="nav-item">
-                <Link class="nav-link collapsed" to='/cart' data-toggle="collapse" data-target="#collapseTwo"
-                        aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>Payment</span>
-                    </Link>
+               
                     </li>
 
-                    <li class="nav-item">
-                    <Link class="nav-link collapsed" to='/bookingconfirmedlist' data-toggle="collapse" data-target="#collapseTwo"
-                        aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>My Orders</span>
-                    </Link>
-                    </li>
+                   
 
                 <hr class="sidebar-divider" />
 

@@ -51,7 +51,7 @@ function Additem({useremail}) {
   return (
   <>
      <form onSubmit={formik.handleSubmit}>
-        <div className='container'>
+        <div className='container' id='additemconter'>
           <div className='row mt-4'>
             <div className='col-lg-4 text-right align-self-center'><label><b>Dish Name:</b></label></div>
             <div className='col-lg-2'><input type="text" className='form-control' id='inputbox'
@@ -64,7 +64,8 @@ function Additem({useremail}) {
           </div>
           <div className='row mt-4'>
             <div className='col-lg-4 text-right align-self-center'><label><b>Quntity:</b></label></div>
-            <div className='col-lg-1'><input type="number" min="1" step="1" className='form-control' id='inputbox'
+            <div className='col-lg-1'><input type="number" min="1" step="1" required
+            className='form-control' id='inputbox'
              onChange={formik.handleChange} value={formik.values.quntity}  name='quntity'></input></div>
           </div>
           

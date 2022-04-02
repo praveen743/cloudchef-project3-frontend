@@ -20,20 +20,9 @@
   
   margin-left: 60%;
 }
-#loginbtn,#regbtn{
-  background-color: #e60000;
-  color: white;
-  font-weight: bolder;
-  margin-left: 20px;
-}
 
- 
 
-#accordionSidebar{
-  background-color:   #e60000;
-  
-  
-}
+
 
 .totalbox{
   background-color: #e60000;
@@ -58,26 +47,34 @@
    
 }
 
-#cartcard{
-  background-color: #e60000;
-}
+ 
 
 #inputbox,#submitbutton{
-  background-color: #e60000;
+  background-color: #8658A5;
   color: white;
   font-weight: bolder;
 }
 
 #card{
-  background-color: #e60000;
+  background-color: #8658A5;
   color: white;
   font-weight: bolder;
-  border-radius: 0px;
+  border-radius: 10px;
+  width:252px;
+  height: 300px;
+  transition: height 0.2s;
+  border: none;
+}
+
+#card:hover{
+   height: 310px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 60px #8658A5;
 }
 
 #image{
   height: 150px;
-  width: 250px;
+  width: 252px;
   border-radius: 0px;
 }
 
@@ -88,8 +85,9 @@
 }
 
 #button{
-  background-color: #ff0000;
+  background-color: #8658A5;
  color: white;
+ font-weight: bold;
   
 }
 
