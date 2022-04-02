@@ -16,7 +16,7 @@ var billarray=[];
 
   let fetchcart = async () => {
     try {
-      let itemdetials = await axios.get(`http://localhost:3003/cart/${useremail}`);
+      let itemdetials = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/cart/${useremail}`);
       console.log(itemdetials.data);
       setcartarr(itemdetials.data)
         
@@ -30,7 +30,7 @@ var billarray=[];
     try {
         let result = window.confirm("Are you sure do you want to cancel the order?")
         if (result) {
-            await axios.delete(`http://localhost:3003/cart/${id}` )
+            await axios.delete(`https://cloudchef-project3-backend.herokuapp.com/cart/${id}` )
             fetchcart()
         }
     } catch (error) {
@@ -41,7 +41,7 @@ var billarray=[];
 
 let calculate = async (id) => {
   try {
-      var orderinfo = await axios.get(`http://localhost:3003/itemcart/${id}`,{
+      var orderinfo = await axios.get(`https://cloudchef-project3-backend.herokuapp.com/itemcart/${id}`,{
         headers: {
             Authorization: window.localStorage.getItem("my_token")
         },
