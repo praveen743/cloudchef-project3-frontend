@@ -15,7 +15,7 @@ function Customorderpayment() {
 
       let confirmorder = async () => {
         try {
-          let itemdetials = await axios.put(`http://localhost:3003/custompayorder/${params.id}`);
+          let itemdetials = await axios.put(`https://cloudchef-project3-backend.herokuapp.com/custompayorder/${params.id}`);
             navigate('/mycustomorder')
            
         } catch (error) {
