@@ -40,7 +40,7 @@ function App() {
               <div class="container-fluid">
                 <Routes>
                 <Route path="/login" element={<Login setuseremail={setuseremail}/>}></Route>
-                <Route path="/register" element={<Register/>}></Route>
+                <Route path="/" element={<Register/>}></Route>
  <Route path="/addrecipe" element={<Addrecipe useremail={useremail} />}></Route>
  <Route path="/addtomenu" element={<Addtomenu />}></Route>
  <Route path="/dashboard" element={<Dashboard useremail={useremail}/>}></Route>
