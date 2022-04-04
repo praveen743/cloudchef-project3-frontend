@@ -48,7 +48,7 @@ export default function Topbar({ useremail ,setuseremail}) {
                     Login</button></Link>:<Link to='/login'>  <button className="btn btn-sm "
          id='blink_me'>Login</button></Link> }
 
-                <Link to='/register'><button className="btn btn-sm " id='loginbtn' >Register</button></Link>
+                <Link to='/'><button className="btn btn-sm " id='loginbtn' >Register</button></Link>
 
                 <button className="btn btn-sm " id='loginbtn'
              onClick={() => handleLogout()}>Logout</button>  
